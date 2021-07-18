@@ -52,6 +52,17 @@ body {
   transform: translateY(-3px); /* account for the height of the clock hands */
 }
 
+.center-clock {
+  width: 5%;
+  height: 13px;
+  background: black;
+  position: absolute;
+  border-radius: 50%;
+  top: 48%;
+  right: 48%;
+  z-index: 3;
+}
+
 .hand {
   width: 50%;
   height: 6px;
@@ -62,4 +73,13 @@ body {
   transform: rotate(90deg);
   transition: all 0.5s;
   transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+.hour-hand {
+  width: 40%;
+  right: 50%;
+}
+
+.second-hand {
+  height: 4px;
 }

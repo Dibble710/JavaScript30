@@ -2,6 +2,7 @@
   --base: #323330;
   --spacing: 10px;
   --blur: 0px;
+  --hightlight: #f0db4f;
 }
 
 body {
@@ -30,5 +31,5 @@ img {
 }
 
 .highlight {
-  color: #F0DB4F;
+  color: var(--hightlight);
 }

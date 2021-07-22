@@ -1,5 +1,5 @@
 :root {
-    --button-click: #1abc9c;
+    --button-click: #1abc9c8c;
 }
 
 
@@ -46,6 +46,7 @@ body {
   border: 2px solid white;
   outline: none;
   background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 20%;
 }
 
 .grid button:hover {
@@ -59,9 +60,7 @@ button {
 }
 
 button:hover {
-  background: #fff;
   box-shadow: 0px 2px 10px 5px var(--button-click);
-  color: #000;
 }
 
 button:after {
@@ -89,12 +88,14 @@ button:focus {
 }
 
 .span-two {
+  border-radius: 15% !important;
   grid-column: span 2;
 }
 
 .output {
+  border-radius: 15px 15px 10px 10px ;
   grid-column: 1 / -1;
-  background-color: rgba(0, 0, 0, 0.75);
+  background-color: rgba(0, 0, 0, 0.55);
   display: flex;
   align-items: flex-end;
   justify-content: space-around;

@@ -1,0 +1,1 @@
+Weather app build for you current timezone, with a cool little animated .svg! Built to practice using JS as well as API calls.

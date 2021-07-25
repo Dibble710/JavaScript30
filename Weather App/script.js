@@ -33,7 +33,7 @@ window.addEventListener("load", () => {
 
           // set DOM elements from API
           actualTemp.textContent = temp + " F";
-          
+          actualTemp.classList.remove('.loading')
           feelsLike.textContent = feels_like + " F";
           locationTimezone.textContent = location;
           tempDescription.textContent = description;

@@ -77,4 +77,11 @@ body {
   border-top-color: aquamarine;
   border-bottom-color: aquamarine;
   border-radius: 50%;
+  animation: loading 1s linear infinite;
+}
+
+@keyframes loading {
+  to {
+    transform: rotate(1turn);
+  }
 }

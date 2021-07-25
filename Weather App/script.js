@@ -12,11 +12,14 @@ window.addEventListener("load", () => {
     navigator.geolocation.getCurrentPosition((position) => {
       console.log(position);
       lon = position.coords.longitude;
+      console.log("lon " + lon);
 
       lat = position.coords.latitude;
+      console.log("lat " + lat);
 
       const proxy = "https://cors-anywhere.herokuapp.com/";
-      const api = `api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=b852b4436a07dc84fe5b7084e11e85ab`;
+      const api = `${proxy}api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=b852b4436a07dc84fe5b7084e11e85ab`;
+      // api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
 
       fetch(api)
         .then((response) => {
@@ -33,11 +36,17 @@ window.addEventListener("load", () => {
 
           // set DOM elements from API
           actualTemp.textContent = temp + " F";
-          actualTemp.classList.remove('.loading')
           feelsLike.textContent = feels_like + " F";
           locationTimezone.textContent = location;
-          tempDescription.textContent = description;
+          tempDescription.textContent = description.toUpperCase();
           windSpeed.textContent = `${wind.toString().substr(0,1)} mph`
+
+          // Remove loading spinner once api call is made
+
+          actualTemp.classList.remove('loading')
+          feelsLike.classList.remove('loading')
+          locationTimezone.classList.remove('loading')
+          tempDescription.classList.remove('loading')
         });
     });
   }

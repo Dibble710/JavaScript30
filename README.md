@@ -1,1 +1,1 @@
-30 day challenge!! I will be attempting to create 30 JS based apps in the next 30 days to practice JS fundimentals!
+30 basic javscript applications built to master the fundimentals of vanilla js, as well as a few js frameworks, such as vue and react!
